@@ -1,0 +1,17 @@
+# Paste the 'stolen' token
+$token = "<Token>"
+$subscription_id = "<Subscription ID>"
+
+$body = @{
+    "location"   = "westeurope" # Or any other location, where the resource group is
+    "properties" = @{
+        "addressSpace" = @{
+            "addressPrefixes" = @('10.10.0.0/16')
+        }
+    }
+}
+  
+# Use this token as authorization in a PUT request to create a Virtual Network
+$response = Invoke-WebRequest -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription_id}/resourcegroups/<Resource Group Name>/providers/Microsoft.Network/virtualNetworks/<Vnet Name>?api-version=2021-08-01" -Headers @{Authorization = "Bearer ${token}" } -Body ($body | ConvertTo-Json -Depth 100) -ContentType "application/json"
+
+echo $response

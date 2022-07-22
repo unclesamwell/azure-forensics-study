@@ -1,0 +1,1 @@
+az policy definition create --name "A Flow Log should be enabled for used regions" --mode All --description "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes when a security incident occurs or when your network is compromised." --metadata "category=NewCompliance" --rules .\rules.json --params .\params.json

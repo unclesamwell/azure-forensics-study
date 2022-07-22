@@ -1,0 +1,47 @@
+{
+   "CreationTime":"2022-06-21T10:31:44",
+   "Id":"60feb667-8d20-424f-fbf3-08da53713d29",
+   "Operation":"MailItemsAccessed",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":2,
+   "ResultStatus":"Succeeded",
+   "UserKey":"10032001FFA9C76E",
+   "UserType":0,
+   "Version":1,
+   "Workload":"Exchange",
+   "ClientIP":"2001:7b8:645:41:10:18:17:74",
+   "UserId":"sam@zwym3.onmicrosoft.com",
+   "ClientIPAddress":"2001:7b8:645:41:10:18:17:74",
+   "ClientInfoString":"Client=MSExchangeRPC",
+   "ClientProcessName":"OUTLOOK.EXE",
+   "ClientRequestId":"{5C7B3BC2-A945-416B-B9CD-6C4E0FFE30E0}",
+   "ClientVersion":"16.0.15225.20286",
+   "ExternalAccess":false,
+   "InternalLogonType":0,
+   "LogonType":0,
+   "LogonUserSid":"S-1-5-21-2318273752-601668848-1441672374-5088222",
+   "MailboxGuid":"70d5fb25-f19e-4c27-802d-9ec21f26d6d0",
+   "MailboxOwnerSid":"S-1-5-21-2318273752-601668848-1441672374-5088222",
+   "MailboxOwnerUPN":"sam@zwym3.onmicrosoft.com",
+   "OperationProperties":[
+      {
+         "Name":"MailAccessType",
+         "Value":"Sync"
+      },
+      {
+         "Name":"IsThrottled",
+         "Value":"False"
+      }
+   ],
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB8P193MB0727 (15.20.4200.000)\r\n",
+   "SessionId":"273b119e-b19d-4814-86af-fb24b997feb1",
+   "Item":{
+      "Id":"LgAAAABxMqdl8ndsRKxsiaS2MVDzAQASrbfg51svR5cgsKGfzjTUAAAAAAEMAAAB",
+      "ParentFolder":{
+         "Id":"LgAAAABxMqdl8ndsRKxsiaS2MVDzAQASrbfg51svR5cgsKGfzjTUAAAAAAEMAAAB",
+         "Name":"Inbox",
+         "Path":"Not Available"
+      }
+   }
+}

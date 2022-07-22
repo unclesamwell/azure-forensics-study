@@ -1,0 +1,74 @@
+{
+    "if": {
+        "field": "type",
+        "equals": "Microsoft.Resources/subscriptions"
+    },
+    "then": {
+        "effect": "[parameters('effect')]",
+        "details": {
+            "type": "Microsoft.Insights/diagnosticSettings",
+            "existenceCondition": {
+                "count": {
+                    "field": "Microsoft.Insights/diagnosticSettings/logs[*]",
+                    "where": {
+                        "anyOf": [
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+                                        "equals": "true"
+                                    },
+                                    {
+                                        "anyOf": [
+                                            {
+                                                "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+                                                "equals": "0"
+                                            },
+                                            {
+                                                "value": "[padLeft(current('Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days'), 3, '0')]",
+                                                "greaterOrEquals": "[padLeft(parameters('requiredRetentionDays'), 3, '0')]"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].enabled",
+                                        "equals": "true"
+                                    },
+                                    {
+                                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].category",
+                                        "equals": "ADFSSignInLogs"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].enabled",
+                                        "equals": "true"
+                                    },
+                                    {
+                                        "anyOf": [
+                                            {
+                                                "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+                                                "notEquals": "true"
+                                            },
+                                            {
+                                                "field": "Microsoft.Insights/diagnosticSettings/storageAccountId",
+                                                "exists": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].category",
+                                        "equals": "ADFSSignInLogs"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "greaterOrEquals": 1
+            }
+        }
+    }
+}

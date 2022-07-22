@@ -1,0 +1,46 @@
+from azure.cosmos import CosmosClient
+import hashlib
+import datetime
+import base64
+from cryptography.fernet import Fernet
+
+# The type of authentication chosen is via the cosmosdb key (as the cosmosdb will be deleted, so it will be different next time)
+connection_string = "<Connection String>"
+cosmos_client = CosmosClient.from_connection_string(conn_str=connection_string)
+
+data_plaintext = {'id': "User10",
+                  'UserId': '10',
+                  'username': 'johndoe',
+                  'password': hashlib.md5("somerandompassword".encode('utf-8')).hexdigest(),
+                  'firstname': 'John',
+                  'lastname': 'Doe',
+                  'created_at': datetime.date(2018, 9, 11).strftime('%c'),
+                  'last_login': datetime.date(2022, 2, 14).strftime('%c'),
+                  'last_login_ip': '1.2.3.4'
+                  }
+
+# get database client
+database_client = cosmos_client.get_database_client(
+    database="<Database Name>")
+
+# get container client
+container_client = database_client.get_container_client('<Container Name>')
+
+# setup the item to be encrypted
+container_client.upsert_item(data_plaintext, populate_query_metrics=False)
+
+# get encryption key
+symm_key = base64.urlsafe_b64encode(b"securaencryptionkeytodestruction")
+cipher_suite = Fernet(symm_key)
+
+# get item back from cosmos DB
+item = container_client.read_item("user10", partition_key="10")
+for key, value in item.items():
+    if key == "id" or key == "UserId":
+        continue
+    else:
+        item[key] = cipher_suite.encrypt(str(value).encode()).decode()
+
+# overwrite the item with encrypted version
+container_client.upsert_item(
+    item, populate_query_metrics=False)

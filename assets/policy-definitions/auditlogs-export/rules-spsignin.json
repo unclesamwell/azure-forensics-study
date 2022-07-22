@@ -1,0 +1,74 @@
+{
+    "if": {
+        "field": "type",
+        "equals": "Microsoft.AADIAM/diagnosticSettings"
+    },
+    "then": {
+        "effect": "[parameters('effect')]",
+        "details": {
+            "type": "Microsoft.AADIAM/diagnosticSettings/logs",
+            "existenceCondition": {
+                "count": {
+                    "field": "Microsoft.AADIAM/diagnosticSettings/logs[*]",
+                    "where": {
+                        "anyOf": [
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].retentionPolicy.enabled",
+                                        "equals": "true"
+                                    },
+                                    {
+                                        "anyOf": [
+                                            {
+                                                "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].retentionPolicy.days",
+                                                "equals": "0"
+                                            },
+                                            {
+                                                "value": "[padLeft(current('Microsoft.AADIAM/diagnosticSettings/logs[*].retentionPolicy.days'), 3, '0')]",
+                                                "greaterOrEquals": "[padLeft(parameters('requiredRetentionDays'), 3, '0')]"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].enabled",
+                                        "equals": "true"
+                                    },
+                                    {
+                                        "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].category",
+                                        "equals": "ServicePrincipalSignInLogs"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].enabled",
+                                        "equals": "true"
+                                    },
+                                    {
+                                        "anyOf": [
+                                            {
+                                                "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].retentionPolicy.enabled",
+                                                "notEquals": "true"
+                                            },
+                                            {
+                                                "field": "Microsoft.AADIAM/diagnosticSettings/storageAccountId",
+                                                "exists": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "field": "Microsoft.AADIAM/diagnosticSettings/logs[*].category",
+                                        "equals": "ServicePrincipalSignInLogs"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "greaterOrEquals": 1
+            }
+        }
+    }
+}

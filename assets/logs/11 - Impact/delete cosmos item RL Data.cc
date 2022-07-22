@@ -1,0 +1,33 @@
+{
+    "time": "2022-07-06T13:27:42.3702296Z",
+    "resourceId": "/SUBSCRIPTIONS/A921D5D4-BDB7-43C3-AA01-88C6AE24992F/RESOURCEGROUPS/SECURAALLRG/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/SECURACOSMOSDB",
+    "category": "DataPlaneRequests",
+    "operationName": "Delete",
+    "properties": {
+        "activityId": "eb770761-33cf-4b66-b57c-81d27e7877ed",
+        "requestResourceType": "Document",
+        "requestResourceId": "/dbs/All%20Database/colls/Users/docs/User10",
+        "collectionRid": "",
+        "databaseRid": "",
+        "statusCode": "204",
+        "duration": "28.147100",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0 azure-cosmos-js/3.16.2 Azure Portal",
+        "clientIpAddress": "<Redacted>",
+        "requestCharge": "10.290000",
+        "requestLength": "0",
+        "responseLength": "0",
+        "resourceTokenPermissionId": "",
+        "resourceTokenPermissionMode": "",
+        "resourceTokenUserRid": "",
+        "region": "West Europe",
+        "partitionId": "",
+        "aadAppliedRoleAssignmentId": "",
+        "aadPrincipalId": "",
+        "authTokenType": "PrimaryMasterKey",
+        "keyType": "PrimaryMasterKey",
+        "connectionMode": "Gateway",
+        "subscriptionId": "a921d5d4-bdb7-43c3-aa01-88c6ae24992f",
+        "databaseName": "All Database",
+        "collectionName": "Users"
+    }
+}

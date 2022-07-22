@@ -1,0 +1,47 @@
+{
+   "CreationTime":"2022-06-21T09:21:20",
+   "Id":"1d15357c-7401-4616-949f-f93d81e90073",
+   "Operation":"MailItemsAccessed",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":50,
+   "ResultStatus":"Succeeded",
+   "UserKey":"10032001FFA9C76E",
+   "UserType":0,
+   "Version":1,
+   "Workload":"Exchange",
+   "UserId":"sam@zwym3.onmicrosoft.com",
+   "ClientIPAddress":"<Redacted>",
+   "ClientInfoString":"Client=OWA;Action=ViaProxy",
+   "ExternalAccess":false,
+   "InternalLogonType":0,
+   "LogonType":0,
+   "LogonUserSid":"S-1-5-21-2318273752-601668848-1441672374-5088222",
+   "MailboxGuid":"70d5fb25-f19e-4c27-802d-9ec21f26d6d0",
+   "MailboxOwnerSid":"S-1-5-21-2318273752-601668848-1441672374-5088222",
+   "MailboxOwnerUPN":"sam@zwym3.onmicrosoft.com",
+   "OperationProperties":[
+      {
+         "Name":"MailAccessType",
+         "Value":"Bind"
+      },
+      {
+         "Name":"IsThrottled",
+         "Value":"False"
+      }
+   ],
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB8P193MB0727 (15.20.4200.000)\r\n",
+   "SessionId":"02650bd1-3f62-4450-8490-e682f9b6a5ad",
+   "Folders":[
+      {
+         "FolderItems":[
+            {
+               "InternetMessageId":"<CAErBVJ0A+KoE6M9KESshfOF1-aotEzvnHocaaAw-n-76oOFepw@mail.gmail.com>"
+            }
+         ],
+         "Id":"LgAAAABxMqdl8ndsRKxsiaS2MVDzAQASrbfg51svR5cgsKGfzjTUAAAAAAEdAAAB",
+         "Path":"\\Junk Email"
+      }
+   ],
+   "OperationCount":1
+}

@@ -1,0 +1,91 @@
+{
+   "authorization":{
+      "action":"Microsoft.Compute/virtualMachines/write",
+      "scope":"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourcegroups/SecuraDefaultRG/providers/Microsoft.Compute/virtualMachines/VMFronInternalImage"
+   },
+   "caller":"attacker@securathesis.onmicrosoft.com",
+   "channels":"Operation",
+   "claims":{
+      "aud":"https://management.core.windows.net/",
+      "iss":"https://sts.windows.net/d2af6ef7-a00c-438f-903b-65592cfddc48/",
+      "iat":"1656321634",
+      "nbf":"1656321634",
+      "exp":"1656327258",
+      "http://schemas.microsoft.com/claims/authnclassreference":"1",
+      "aio":"AWQAm/8TAAAAEPf/LrPJN9aHh3zCb6in8sEmUFJC7BY7jtPCZgd09inhDBKycww1KrzVPnrqc5lOZfkw8rj7hyoM1KOGowxSwi0aTbTRWs3F+dGsX8L/c1vJ2v75dUXJ9IP4TehDEcvF",
+      "altsecid":"5::10030000A34FAC40",
+      "http://schemas.microsoft.com/claims/authnmethodsreferences":"pwd,mfa",
+      "appid":"04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+      "appidacr":"0",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress":"attacker@securathesis.onmicrosoft.com",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname":"Attacker",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname":"attacker@securathesis.onmicrosoft.com",
+      "groups":"f40ae73b-c115-425e-9661-cf5384a00dbb",
+      "http://schemas.microsoft.com/identity/claims/identityprovider":"https://sts.windows.net/cc7df247-60ce-4a0f-9d75-704cf60efc64/",
+      "ipaddr":"<Redacted>",
+      "name":"attacker@securathesis.onmicrosoft.com Attacker",
+      "http://schemas.microsoft.com/identity/claims/objectidentifier":"ac7e68c4-40fe-4b81-a7f7-b484de797cd3",
+      "puid":"10032001E7FA056C",
+      "rh":"0.AYIA926v0gygj0OQO2VZLP3cSEZIf3kAutdPukPawfj2MBOVACw.",
+      "http://schemas.microsoft.com/identity/claims/scope":"user_impersonation",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier":"y6aZjS94PhnX8BrP8QnuQZq8U8fr9AXFgS9T_2EqdK8",
+      "http://schemas.microsoft.com/identity/claims/tenantid":"d2af6ef7-a00c-438f-903b-65592cfddc48",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name":"attacker@securathesis.onmicrosoft.com",
+      "uti":"oiQFFTG7iEaxv7TR-0JNAA",
+      "ver":"1.0",
+      "wids":"62e90394-69f5-4237-9190-012177145e10,b79fbf4d-3ef9-4689-8143-76b194e85509",
+      "xms_tcdt":"1648126498"
+   },
+   "correlationId":"1c5484f9-d4d5-444e-859f-fca899a78c3f",
+   "description":"",
+   "eventDataId":"67f63a83-73b3-41c7-82e7-933e3a5e75fe",
+   "eventName":{
+      "value":"EndRequest",
+      "localizedValue":"End request"
+   },
+   "category":{
+      "value":"Administrative",
+      "localizedValue":"Administrative"
+   },
+   "eventTimestamp":"2022-06-27T09:25:41.9452377Z",
+   "id":"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourcegroups/SecuraDefaultRG/providers/Microsoft.Compute/virtualMachines/VMFronInternalImage/events/67f63a83-73b3-41c7-82e7-933e3a5e75fe/ticks/637919187419452377",
+   "level":"Informational",
+   "operationId":"94f749f4-66be-4100-9c16-944c64b60c7f",
+   "operationName":{
+      "value":"Microsoft.Compute/virtualMachines/write",
+      "localizedValue":"Create or Update Virtual Machine"
+   },
+   "resourceGroupName":"SecuraDefaultRG",
+   "resourceProviderName":{
+      "value":"Microsoft.Compute",
+      "localizedValue":"Microsoft.Compute"
+   },
+   "resourceType":{
+      "value":"Microsoft.Compute/virtualMachines",
+      "localizedValue":"Microsoft.Compute/virtualMachines"
+   },
+   "resourceId":"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourcegroups/SecuraDefaultRG/providers/Microsoft.Compute/virtualMachines/VMFronInternalImage",
+   "status":{
+      "value":"Accepted",
+      "localizedValue":"Accepted"
+   },
+   "subStatus":{
+      "value":"Created",
+      "localizedValue":"Created (HTTP Status Code: 201)"
+   },
+   "submissionTimestamp":"2022-06-27T09:27:09.1753916Z",
+   "subscriptionId":"a921d5d4-bdb7-43c3-aa01-88c6ae24992f",
+   "tenantId":"d2af6ef7-a00c-438f-903b-65592cfddc48",
+   "properties":{
+      "statusCode":"Created",
+      "serviceRequestId":null,
+      "responseBody":"{\"name\":\"VMFronInternalImage\",\"id\":\"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourceGroups/SecuraDefaultRG/providers/Microsoft.Compute/virtualMachines/VMFronInternalImage\",\"type\":\"Microsoft.Compute/virtualMachines\",\"location\":\"westeurope\",\"tags\":{},\"properties\":{\"vmId\":\"01a112ce-b7ed-47ef-80ce-16b05557792a\",\"hardwareProfile\":{\"vmSize\":\"Standard_B1s\"},\"storageProfile\":{\"imageReference\":{\"id\":\"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourceGroups/SecuraDefaultRG/providers/Microsoft.Compute/images/InternalImage\"},\"osDisk\":{\"osType\":\"Linux\",\"createOption\":\"FromImage\",\"caching\":\"ReadWrite\",\"managedDisk\":{\"storageAccountType\":\"Standard_LRS\"},\"deleteOption\":\"Detach\",\"diskSizeGB\":64},\"dataDisks\":[]},\"osProfile\":{\"computerName\":\"VMFronInternalImage\",\"adminUsername\":\"s.Attacker\",\"linuxConfiguration\":{\"disablePasswordAuthentication\":true,\"ssh\":{\"publicKeys\":[{\"path\":\"/home/s.Attacker/.ssh/authorized_keys\",\"keyData\":\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC2p58e6d1Z5hlNrZszGktX7+OmilKqJBT9zc3GPSbSpzLIWx519D9cxAcpSptuFLRa7yy8Z1fPQJiaYhNjV7bzDF6TUrQitP1RI5VRkQz6l7GIlCFovzAozsCV58zJaOmpubziTKNOmlpFaC4+gIdWP7aBUOv53CTjP8nRvwH06XV8QLAUNwsEqTQ/aA14urWynA3xeuOafJSGQ742LUcA+fGdc3zH+T4uV0jiAw5AllLAiCeeK1mvFa/b87E1oS0GcJ9vCE9YgDqA70gpKlIWWNhv6w8yOLLYVNFPXYvUtAcL7MaWsyFembmqpOFthIuymSvb5n2cJ/c+Tby+wqtNu5vNq96cU00Kkvj1r+dDjrAfWcZ9sLypL0GTTYEQYT6l3QjGdOlaL1ok5cqP8Lr81hsKeXBZYR/LP/Fc5qy1BUCSHUJMBZ6euRYVg1e30v/sTegYNB/nKP2cERpLcEpD16flY82MlM7H2AOG3hzokt2UoVk67f6uMYUZ3cDuISU= intern\\\\s.Attacker@Secura-PF233KZN\\n\"}]},\"provisionVMAgent\":true,\"patchSettings\":{\"patchMode\":\"ImageDefault\",\"assessmentMode\":\"ImageDefault\"},\"enableVMAgentPlatformUpdates\":false},\"secrets\":[],\"allowExtensionOperations\":true,\"requireGuestProvisionSignal\":true},\"networkProfile\":{\"networkInterfaces\":[{\"id\":\"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourceGroups/SecuraDefaultRG/providers/Microsoft.Network/networkInterfaces/VMFronInternalImageVMNic\"}]},\"provisioningState\":\"Creating\",\"timeCreated\":\"2022-06-27T09:25:41.83032+00:00\"}}",
+      "eventCategory":"Administrative",
+      "entity":"/subscriptions/a921d5d4-bdb7-43c3-aa01-88c6ae24992f/resourcegroups/SecuraDefaultRG/providers/Microsoft.Compute/virtualMachines/VMFronInternalImage",
+      "message":"Microsoft.Compute/virtualMachines/write",
+      "hierarchy":"d2af6ef7-a00c-438f-903b-65592cfddc48/a921d5d4-bdb7-43c3-aa01-88c6ae24992f"
+   },
+   "relatedEvents":[
+      
+   ]
+}

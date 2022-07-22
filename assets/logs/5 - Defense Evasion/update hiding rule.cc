@@ -1,0 +1,39 @@
+{
+   "CreationTime":"2022-06-22T09:14:56",
+   "Id":"fd62e50e-3ce0-49ca-83a4-08da542faced",
+   "Operation":"Set-InboxRule",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":1,
+   "ResultStatus":"True",
+   "UserKey":"10032001FFA9C76E",
+   "UserType":2,
+   "Version":1,
+   "Workload":"Exchange",
+   "ClientIP":"<Redacted>",
+   "ObjectId":"n8jq\\15225790786672001025",
+   "UserId":"sam@zwym3.onmicrosoft.com",
+   "AppId":"",
+   "ClientAppId":"",
+   "ExternalAccess":false,
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB8P193MB0727 (15.20.5353.022)",
+   "Parameters":[
+      {
+         "Name":"Identity",
+         "Value":"Hiding Rule"
+      },
+      {
+         "Name":"MarkAsRead",
+         "Value":"True"
+      },
+      {
+         "Name":"DeleteMessage",
+         "Value":"True"
+      },
+      {
+         "Name":"BodyContainsWords",
+         "Value":"phishing"
+      }
+   ],
+   "SessionId":"e435215c-333a-443d-9c64-66bb3094c92b"
+}

@@ -1,0 +1,33 @@
+{
+    "time": "2022-07-06T08:38:02.1201745Z",
+    "resourceId": "/SUBSCRIPTIONS/A921D5D4-BDB7-43C3-AA01-88C6AE24992F/RESOURCEGROUPS/SECURAALLRG/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/SECURACOSMOSDB",
+    "category": "DataPlaneRequests",
+    "operationName": "Create",
+    "properties": {
+        "activityId": "c4f18481-d144-4f4d-bb76-d492185704ab",
+        "requestResourceType": "DocumentFeed",
+        "requestResourceId": "/dbs/All%20Database/colls/Users/docs/",
+        "collectionRid": "",
+        "databaseRid": "",
+        "statusCode": "200",
+        "duration": "15.599100",
+        "userAgent": "azsdk-python-cosmos/4.2.0 Python/3.10.3 (Windows-10-10.0.19044-SP0)",
+        "clientIpAddress": "<Redacted>",
+        "requestCharge": "14.290000",
+        "requestLength": "1600",
+        "responseLength": "1129",
+        "resourceTokenPermissionId": "",
+        "resourceTokenPermissionMode": "",
+        "resourceTokenUserRid": "",
+        "region": "West Europe",
+        "partitionId": "",
+        "aadAppliedRoleAssignmentId": "",
+        "aadPrincipalId": "",
+        "authTokenType": "PrimaryMasterKey",
+        "keyType": "PrimaryMasterKey",
+        "connectionMode": "Gateway",
+        "subscriptionId": "a921d5d4-bdb7-43c3-aa01-88c6ae24992f",
+        "databaseName": "All Database",
+        "collectionName": "Users"
+    }
+}

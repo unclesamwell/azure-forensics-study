@@ -1,0 +1,1 @@
+All of these policies are not working. It seems to be impossible to define policies that check settings on a level higher than the subscription. This kind of makes sense, as the policies are scoped towards a subscription (Also the Management Group Tenant Root Group is not working).

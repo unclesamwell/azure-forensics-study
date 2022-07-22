@@ -1,0 +1,33 @@
+{
+    "time": "2022-07-06T13:28:09.9455719Z",
+    "resourceId": "/SUBSCRIPTIONS/A921D5D4-BDB7-43C3-AA01-88C6AE24992F/RESOURCEGROUPS/SECURAALLRG/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/SECURACOSMOSDB",
+    "category": "DataPlaneRequests",
+    "operationName": "Delete",
+    "properties": {
+        "activityId": "cb466c27-4124-49d9-bd1e-60daea56c662",
+        "requestResourceType": "Database",
+        "requestResourceId": "/dbs/All%20Database",
+        "collectionRid": "",
+        "databaseRid": "",
+        "statusCode": "204",
+        "duration": "45.678000",
+        "userAgent": "Microsoft.Azure.Documents.Common/2.14.0",
+        "clientIpAddress": "20.73.222.150",
+        "requestCharge": "4.950000",
+        "requestLength": "0",
+        "responseLength": "0",
+        "resourceTokenPermissionId": "",
+        "resourceTokenPermissionMode": "",
+        "resourceTokenUserRid": "",
+        "region": "West Europe",
+        "partitionId": "",
+        "aadAppliedRoleAssignmentId": "",
+        "aadPrincipalId": "",
+        "authTokenType": "SystemReadWrite",
+        "keyType": "SystemReadWrite",
+        "connectionMode": "Gateway",
+        "subscriptionId": "a921d5d4-bdb7-43c3-aa01-88c6ae24992f",
+        "databaseName": "All Database",
+        "collectionName": ""
+    }
+}

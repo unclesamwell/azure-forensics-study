@@ -1,0 +1,173 @@
+variable "allow_ips" {
+  default = ["your/32", "ip addresses/32"]
+}
+
+variable "myip_string" {
+  default = "your_ip"
+}
+
+variable "vnet_ips" {
+  default = ["10.0.0.0/16"]
+}
+
+variable "azure_region" {
+  default = "westeurope"
+}
+
+variable "rg_name_all" {
+  default = "ExampleAllRG"
+}
+
+variable "vnet_name_all" {
+  default = "ExampleAllVnet"
+}
+
+variable "subnet_name_all" {
+  default = "ExampleAllSubnet"
+}
+
+variable "pubip_name_all" {
+  default = "ExampleAllPubIP"
+}
+
+variable "nsg_name_all" {
+  default = "ExampleAllNetSecGroup"
+}
+
+variable "netif_name_all" {
+  default = "ExampleAllInterface"
+}
+
+variable "vm_name_all" {
+  default = "ExampleAllVM"
+}
+
+variable "vm_account_name" {
+  default = "Exampleall"
+}
+
+variable "cosmosdb_account_name" {
+  default = "Examplecosmosdb"
+}
+
+variable "keyvault_name" {
+  default = "ExampleAllKeyVault"
+}
+
+variable "secret_all_name" {
+  default = "ExampleAllSecret"
+}
+
+variable "key_all_name" {
+  default = "ExampleAllRSAKeys"
+}
+
+variable "certificate_all_name" {
+  default = "ExampleAllCert"
+}
+
+variable "function_all_name" {
+  default = "ExampleAllFunctionApp"
+}
+
+variable "app_service_all_name" {
+  default = "ExampleAllAppServicePlan"
+}
+
+variable "app_insights_all_name" {
+  default = "ExampleAllAppInsights"
+}
+
+variable "function_app_container_name" {
+  default = "Exampleallfunctionappcontainer"
+}
+
+variable "cosmos_database_name" {
+  default = "All Database"
+}
+
+variable "nic_name" {
+  default = "AllNIC"
+}
+
+variable "log_workspace_name" {
+  default = "ExampleAllLogAnalyticsWorkspace"
+}
+
+variable "all_keyvault_diag_name" {
+  default = "All KeyVault"
+}
+
+variable "all_functionapp_diag_name" {
+  default = "All FunctionApp"
+}
+
+variable "all_nsg_diag_name" {
+  default = "All NSG"
+}
+
+variable "all_pubip_diag_name" {
+  default = "All PubIP"
+}
+
+variable "all_storageblob_diag_name" {
+  default = "All Storage Account Blob"
+}
+
+variable "all_storageaccount_diag_name" {
+  default = "All Storage Account"
+}
+
+variable "all_cosmosdb_diag_name" {
+  default = "All ComosDB"
+}
+
+variable "all_vnet_diag_name" {
+  default = "All Vnet"
+}
+
+variable "all_azuread_diag_name" {
+  default = "All AzureAD"
+}
+
+variable "all_appserviceplan_diag_name" {
+  default = "All App Service Plan"
+}
+
+variable "all_netif_diag_name" {
+  default = "All Netif"
+}
+
+variable "all_log_workspace_diag_name" {
+  default = "All Log Analytics Workspace"
+}
+
+variable "vm_agent_dependency_name" {
+  default = "DependencyAgent"
+}
+
+variable "vm_agent_log_analytics_name" {
+  default  = "OMSExtension"
+}
+
+variable "watcher_all_name" {
+  default = "networkwatcher_westeurope"
+}
+
+variable "watcher_flow_log_name" {
+  default = "FlowLogAll"
+}
+
+# For Windows as in example (unless python3 on PATH)
+# For Unix based just python3
+variable "python_location" {
+  default = "%USERPROFILE%\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
+}
+
+variable "storage_container_name" {
+  default = "Examplecontainer"
+}
+
+variable "snapshot_name" {
+  default = "ExampleAllSnapshot"
+}

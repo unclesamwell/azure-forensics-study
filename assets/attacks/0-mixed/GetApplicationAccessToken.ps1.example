@@ -1,0 +1,33 @@
+# First, some setup
+# Create a Service Principal to generate the access token for
+$sp = (az ad sp create-for-rbac --name "Access Token SP" | ConvertFrom-Json)
+
+echo "Got SP ${sp}"
+
+# Extract needed variables from SP
+$tenant = $sp.tenant
+$appId = $sp.appId
+$password = $sp.password
+
+# Also need the subscription ID
+$subscription_id = (az account show | ConvertFrom-Json).id
+
+# Assign this SP a role so it can read resource groups
+az role assignment create --assignee $appId --role "<Role that allows Resource Group read access>"
+
+# Craft the body for the POST request to get the token
+$body = @{
+    tenant_id     = $tenant
+    client_id     = $appId
+    client_secret = ("${password}" | Out-String)
+    resource      = "https://management.azure.com"
+    grant_type    = "client_credentials"
+}
+
+# Get the token
+$response = (Invoke-WebRequest -Method POST -Uri "https://login.microsoftonline.com/${tenant}/oauth2/token" -ContentType 'application/x-www-form-urlencoded' -body $body | Select-Object -Expand Content | ConvertFrom-Json)
+$token = $response.access_token
+
+# Output info needed subsequent script
+echo "Token acquired: ${token}"
+echo "Subscription ID this is valid for: ${subscription_id}"

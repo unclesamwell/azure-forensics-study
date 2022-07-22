@@ -1,0 +1,37 @@
+{
+   "CreationTime":"2022-06-21T09:30:57",
+   "Id":"1b875278-1e1c-450f-cdce-08da5368bf02",
+   "Operation":"Send",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":2,
+   "ResultStatus":"Succeeded",
+   "UserKey":"10032001FFAF927D",
+   "UserType":0,
+   "Version":1,
+   "Workload":"Exchange",
+   "ClientIP":"<Redacted>",
+   "UserId":"LeeG@zwym3.onmicrosoft.com",
+   "AppId":"00000002-0000-0ff1-ce00-000000000000",
+   "ClientIPAddress":"<Redacted>",
+   "ClientInfoString":"Client=OWA;Action=ViaProxy",
+   "ExternalAccess":false,
+   "InternalLogonType":0,
+   "LogonType":0,
+   "LogonUserSid":"S-1-5-21-2318273752-601668848-1441672374-5068013",
+   "MailboxGuid":"00733ab4-2862-41f9-b107-ddb75ed345be",
+   "MailboxOwnerSid":"S-1-5-21-2318273752-601668848-1441672374-5068013",
+   "MailboxOwnerUPN":"LeeG@zwym3.onmicrosoft.com",
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB9P193MB1468 (15.20.4200.000)\r\n",
+   "SessionId":"54bff951-7af9-4328-a959-92f97f01ac3e",
+   "Item":{
+      "Id":"RgAAAAAmDDFytwW0SKUFJKTEzgApBwDCYFyA58QfTqt0fs\/fPyTGAAAAAAEPAADCYFyA58QfTqt0fs\/fPyTGAAAOUQw7AAAJ",
+      "InternetMessageId":"<DB9P193MB14680A3213FCB1D9E1014E6FCFB39@DB9P193MB1468.EURP193.PROD.OUTLOOK.COM>",
+      "ParentFolder":{
+         "Id":"LgAAAAAmDDFytwW0SKUFJKTEzgApAQDCYFyA58QfTqt0fs\/fPyTGAAAAAAEPAAAB",
+         "Path":"\\Drafts"
+      },
+      "SizeInBytes":6303,
+      "Subject":"Fw: Test mail 4?"
+   }
+}

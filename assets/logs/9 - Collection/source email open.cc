@@ -1,0 +1,57 @@
+{
+   "CreationTime":"2022-06-21T09:30:46",
+   "Id":"4fe1f43e-2b61-4d27-99ab-9850d6857917",
+   "Operation":"MailItemsAccessed",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":50,
+   "ResultStatus":"Succeeded",
+   "UserKey":"10032001FFAF927D",
+   "UserType":0,
+   "Version":1,
+   "Workload":"Exchange",
+   "UserId":"LeeG@zwym3.onmicrosoft.com",
+   "AppId":"13937bba-652e-4c46-b222-3003f4d1ff97",
+   "ClientAppId":"13937bba-652e-4c46-b222-3003f4d1ff97",
+   "ClientIPAddress":"<Redacted>",
+   "ClientInfoString":"Client=REST;Client=RESTSystem;;",
+   "ExternalAccess":false,
+   "InternalLogonType":0,
+   "LogonType":0,
+   "LogonUserSid":"S-1-5-21-2318273752-601668848-1441672374-5068013",
+   "MailboxGuid":"00733ab4-2862-41f9-b107-ddb75ed345be",
+   "MailboxOwnerSid":"S-1-5-21-2318273752-601668848-1441672374-5068013",
+   "MailboxOwnerUPN":"LeeG@zwym3.onmicrosoft.com",
+   "OperationProperties":[
+      {
+         "Name":"MailAccessType",
+         "Value":"Bind"
+      },
+      {
+         "Name":"IsThrottled",
+         "Value":"False"
+      }
+   ],
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB9P193MB1468 (15.20.4200.000)\r\n",
+   "Folders":[
+      {
+         "FolderItems":[
+            {
+               "InternetMessageId":"<DB8P193MB072704BE3E99477A0FC1CC2DBBB39@DB8P193MB0727.EURP193.PROD.OUTLOOK.COM>"
+            }
+         ],
+         "Id":"LgAAAAAmDDFytwW0SKUFJKTEzgApAQDCYFyA58QfTqt0fs\/fPyTGAAAAAAEMAAAB",
+         "Path":"\\Inbox"
+      },
+      {
+         "FolderItems":[
+            {
+               "InternetMessageId":"<DB9P193MB14680A3213FCB1D9E1014E6FCFB39@DB9P193MB1468.EURP193.PROD.OUTLOOK.COM>"
+            }
+         ],
+         "Id":"LgAAAAAmDDFytwW0SKUFJKTEzgApAQDCYFyA58QfTqt0fs\/fPyTGAAAAAAEJAAAB",
+         "Path":"\\Sent Items"
+      }
+   ],
+   "OperationCount":2
+}

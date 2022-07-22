@@ -1,0 +1,47 @@
+{
+   "CreationTime":"2022-06-21T09:32:03",
+   "Id":"e87ff610-d581-4711-8818-08da5368e659",
+   "Operation":"Set-InboxRule",
+   "OrganizationId":"ee07d55e-928e-4049-89e2-c36739e30514",
+   "RecordType":1,
+   "ResultStatus":"True",
+   "UserKey":"10032001FFAF927D",
+   "UserType":2,
+   "Version":1,
+   "Workload":"Exchange",
+   "ClientIP":"<Redacted>",
+   "ObjectId":"LeeG\\18194911990613278721",
+   "UserId":"LeeG@zwym3.onmicrosoft.com",
+   "AppId":"00000002-0000-0ff1-ce00-000000000000",
+   "ClientAppId":"",
+   "ExternalAccess":false,
+   "OrganizationName":"zwym3.onmicrosoft.com",
+   "OriginatingServer":"DB9P193MB1468 (15.20.5353.022)",
+   "Parameters":[
+      {
+         "Name":"AlwaysDeleteOutlookRulesBlob",
+         "Value":"False"
+      },
+      {
+         "Name":"Force",
+         "Value":"False"
+      },
+      {
+         "Name":"Identity",
+         "Value":"Forwarding rule"
+      },
+      {
+         "Name":"ForwardTo",
+         "Value":"<redacted>@gmail.com"
+      },
+      {
+         "Name":"Name",
+         "Value":"Forwarding rule"
+      },
+      {
+         "Name":"StopProcessingRules",
+         "Value":"False"
+      }
+   ],
+   "SessionId":"54bff951-7af9-4328-a959-92f97f01ac3e"
+}

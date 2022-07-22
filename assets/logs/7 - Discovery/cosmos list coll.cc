@@ -1,0 +1,33 @@
+{
+   "time":"2022-07-04T10:01:26.8054204Z",
+   "resourceId":"/SUBSCRIPTIONS/A921D5D4-BDB7-43C3-AA01-88C6AE24992F/RESOURCEGROUPS/SECURAALLRG/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/SECURACOSMOSDB",
+   "category":"DataPlaneRequests",
+   "operationName":"Read",
+   "properties":{
+      "activityId":"43e9348e-fb80-11ec-9097-c8e26530e2c3",
+      "requestResourceType":"CollectionFeed",
+      "requestResourceId":"/dbs/All%20Database/colls",
+      "collectionRid":"",
+      "databaseRid":"",
+      "statusCode":"200",
+      "duration":"5.223700",
+      "userAgent":"Microsoft.Azure.Documents.Common/2.14.0",
+      "clientIpAddress":"20.73.222.150",
+      "requestCharge":"2.000000",
+      "requestLength":"0",
+      "responseLength":"701",
+      "resourceTokenPermissionId":"",
+      "resourceTokenPermissionMode":"",
+      "resourceTokenUserRid":"",
+      "region":"West Europe",
+      "partitionId":"",
+      "aadAppliedRoleAssignmentId":"",
+      "aadPrincipalId":"",
+      "authTokenType":"SystemReadOnly",
+      "keyType":"SystemReadOnly",
+      "connectionMode":"Gateway",
+      "subscriptionId":"a921d5d4-bdb7-43c3-aa01-88c6ae24992f",
+      "databaseName":"All Database",
+      "collectionName":""
+   }
+}
